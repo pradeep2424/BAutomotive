@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <!--https://www.flaticon.com/free-icon/motor-sports_296210#term=motor%20bike&page=1&position=3-->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:src="@mipmap/splash_motor_bike3" />
+
+
+    <!--<pl.droidsonroids.gif.GifImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="150dp"-->
+        <!--android:layout_marginRight="25dp"-->
+        <!--android:src="@mipmap/splash_motor_bike" />-->
+
+    <!--<com.automotive.bautomotive.custom.MyTextView_Roboto_Regular-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="B Automotive"-->
+    <!--android:textColor="#000000"-->
+    <!--android:textSize="45sp" />-->
+
+</RelativeLayout>
