@@ -17,9 +17,9 @@
         android:layout_gravity="bottom"
         android:layout_marginTop="70dp"
         android:gravity="center"
-        android:text="COMPARE  PRICE"
+        android:text="Quality Service"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="24sp" />
 
     <com.automotive.bautomotive.custom.MyTextView_Roboto_Regular
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="45dp"
         android:gravity="center"
-        android:text="Compare and buy at the lowest price from all the top stores"
+        android:text="Experienced &amp; well trained professionals will take care of your bike"
         android:textColor="#000000"
         android:textSize="18sp" />
 
