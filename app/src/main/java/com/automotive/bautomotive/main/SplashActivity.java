@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import com.automotive.bautomotive.R;
 import com.automotive.bautomotive.intro.IntroductionActivity;
+import com.automotive.bautomotive.signIn.LoginActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashActivity.this, IntroductionActivity.class);
+                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }
