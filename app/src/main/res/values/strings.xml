@@ -4,4 +4,10 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="login_verify_awesome">Awesome,</string>
+    <string name="login_text">Please enter your mobile number to get started</string>
+    <string name="login_verify_otp_text">We will auto detect the OTP sent to your </string>
+    <string name="login_hint_mobile_no">Mobile number</string>
+    <string name="proceed">Proceed</string>
 </resources>

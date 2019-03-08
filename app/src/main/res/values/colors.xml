@@ -3,11 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="orange">#ef4e33</color>
+    <color name="orange">#ff9800</color>
     <color name="black">#000000</color>
     <color name="bg_clolor">#fafafa</color>
     <color name="white">#ffffff</color>
     <color name="red">#ef4e33</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="gray">#c7c7cc</color>
+    <color name="text_color">#4a4a4a</color>
+    <color name="login_bg">#FBE9E7</color>eaeaea
+    <color name="login_hint_color">#c6c6c6</color>
+    <color name="deep_orange">#ff3d00</color>
+
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+    <!--<color name="orange">#ef5037</color>-->
+    <color name="bg_1">#FBE9E7</color>
 </resources>
