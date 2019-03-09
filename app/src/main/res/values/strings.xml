@@ -7,7 +7,11 @@
 
     <string name="login_verify_awesome">Awesome,</string>
     <string name="login_text">Please enter your mobile number to get started</string>
-    <string name="login_verify_otp_text">We will auto detect the OTP sent to your </string>
+    <string name="login_verify_otp_text">We will auto detect the OTP sent to your number</string>
     <string name="login_hint_mobile_no">Mobile number</string>
     <string name="proceed">Proceed</string>
+    <string name="get_started_now">Get Started Now</string>
+    <string name="otp_wait_for">Wait for</string>
+
+    <string name="enter_valid_mobile_number">Enter a valid mobile number</string>
 </resources>
