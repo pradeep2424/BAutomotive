@@ -1,7 +1,13 @@
 package com.automotive.bautomotive.signIn;
 
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,51 +15,88 @@ import android.widget.ImageView;
 
 import com.automotive.bautomotive.R;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class LoginActivity extends AppCompatActivity {
 
-    EditText etMobileNumber;
-    Button btnProceed;
-    ImageView ivBack;
+    private EditText etMobileNumber;
+    private Button btnProceed;
+    private ImageView ivBackLogin;
 
-    private View viewMobileNumber;
-    private View viewOTP;
-
-    String mobileNumber;
+    private String mobileNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        viewMobileNumber = getLayoutInflater().inflate(R.layout.activity_login, null);
-//        viewOTP = getLayoutInflater().inflate(R.layout.activity_login_verify_number, null);
-
         setContentView(R.layout.activity_login);
 
         init();
         events();
+//        printHashKey();
     }
 
-    private void init()
-    {
+    private void init() {
         etMobileNumber = (EditText) findViewById(R.id.et_mobileNumber);
         btnProceed = (Button) findViewById(R.id.btn_proceed);
-        ivBack  = (ImageView) findViewById(R.id.iv_back);
+        ivBackLogin = (ImageView) findViewById(R.id.iv_backLogin);
+
+
     }
 
-    private void events()
-    {
+    private void events() {
         btnProceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mobileNumber = etMobileNumber.getText().toString().trim();
-                setContentView(R.layout.activity_login_verify_number);
+
+                if (verifyMobile()) {
+                    Intent intent = new Intent(LoginActivity.this, LoginVerifyPhoneActivity.class);
+                    intent.putExtra("mobile", mobileNumber);
+                    startActivity(intent);
+                }
             }
         });
 
-        ivBack.setOnClickListener(new View.OnClickListener() {
+        ivBackLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_login);
+//                Intent intent = new Intent(LoginActivity.this, LoginVerifyPhoneActivity.class);
+//                intent.putExtra("mobile", mobileNumber);
+//                startActivity(intent);
+                finish();
             }
         });
     }
+
+    private boolean verifyMobile() {
+        if (mobileNumber.isEmpty() || mobileNumber.length() < 10) {
+            etMobileNumber.setError(getString(R.string.enter_valid_mobile_number));
+            etMobileNumber.requestFocus();
+            return false;
+        }
+
+        return true;
+    }
+
+//    public void printHashKey() {
+//        PackageInfo info;
+//        try {
+//            info = getPackageManager().getPackageInfo("com.sogo.sogosurvey", PackageManager.GET_SIGNATURES);
+//            for (Signature signature : info.signatures) {
+//                MessageDigest md;
+//                md = MessageDigest.getInstance("SHA");
+//                md.update(signature.toByteArray());
+//                String something = new String(Base64.encode(md.digest(), 0));
+//                //String something = new String(Base64.encodeBytes(md.digest()));
+//                Log.e("hash key", something);
+//            }
+//        } catch (PackageManager.NameNotFoundException e1) {
+//            Log.e("name not found", e1.toString());
+//        } catch (NoSuchAlgorithmException e) {
+//            Log.e("no such an algorithm", e.toString());
+//        } catch (Exception e) {
+//            Log.e("exception", e.toString());
+//        }
+//    }
 }
