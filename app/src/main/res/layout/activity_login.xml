@@ -6,13 +6,24 @@
     android:layout_height="match_parent"
     android:background="#fdf8f7">
 
+    <ImageView
+        android:id="@+id/iv_backLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:padding="10dp"
+        android:src="@drawable/ic_back_arrow" />
 
-    <RelativeLayout
+
+    <LinearLayout
+        android:layout_below="@+id/iv_backLogin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="2">
 
         <!--<ImageView-->
         <!--android:id="@+id/iv_logo"-->
@@ -23,22 +34,26 @@
         <!--android:layout_marginTop="30dp"-->
         <!--android:src="@drawable/ic_splash_motor" />-->
 
+
         <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/iv_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_alignParentLeft="true"
-            android:layout_gravity="left"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_back_arrow" />
+            android:layout_weight="0.2"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_splash_motor" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv_back"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="top"
             android:orientation="vertical">
 
             <com.automotive.bautomotive.custom.MyTextView_Roboto_Regular
@@ -47,7 +62,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/login_text"
                 android:textColor="@color/text_color"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:id="@+id/ll_mobileNumber"
@@ -76,123 +91,13 @@
                     android:inputType="number"
                     android:maxLength="10"
                     android:padding="5dp"
+                    android:textSize="18sp"
                     android:textColor="@color/text_color"
                     android:textColorHint="@color/login_hint_color" />
             </LinearLayout>
-
-            <!--<LinearLayout-->
-            <!--android:id="@+id/ll_mobileNumber"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="20dp"-->
-            <!--android:background="@drawable/rect_gray"-->
-            <!--android:orientation="horizontal"-->
-            <!--android:padding="10dp">-->
-
-            <!--<ImageView-->
-            <!--android:layout_width="20dp"-->
-            <!--android:layout_height="20dp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:src="@mipmap/person" />-->
-
-            <!--<com.automotive.bautomotive.custom.EditText_SFUI_Regular-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:background="#00000000"-->
-            <!--android:hint="@string/login_hint_mobile_no"-->
-            <!--android:inputType="text"-->
-            <!--android:padding="8dp"-->
-            <!--android:textColor="#000000"-->
-            <!--android:textColorHint="#c6c6c6" />-->
-            <!--</LinearLayout>-->
-
         </LinearLayout>
 
-        <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="25dp"-->
-        <!--android:background="@drawable/rect_gray"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:padding="10dp">-->
-
-        <!--<ImageView-->
-        <!--android:layout_width="20dp"-->
-        <!--android:layout_height="20dp"-->
-        <!--android:layout_gravity="center"-->
-        <!--android:src="@mipmap/lock" />-->
-
-        <!--<com.automotive.bautomotive.custom.EditText_SFUI_Regular-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginLeft="10dp"-->
-        <!--android:background="#00000000"-->
-        <!--android:hint="Password"-->
-        <!--android:inputType="textPassword"-->
-        <!--android:padding="8dp"-->
-        <!--android:textColor="#000000"-->
-        <!--android:textColorHint="#c6c6c6" />-->
-        <!--</LinearLayout>-->
-
-        <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="15dp"-->
-        <!--android:orientation="horizontal">-->
-
-        <!--<CheckBox-->
-        <!--android:layout_width="25dp"-->
-        <!--android:layout_height="25dp"-->
-        <!--android:layout_marginTop="8dp" />-->
-
-        <!--<com.automotive.bautomotive.custom.MyTextView_Roboto_Regular-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginLeft="10dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:text="Remember me"-->
-        <!--android:textColor="#4a4a4a"-->
-        <!--android:textSize="15sp" />-->
-
-        <!--<com.automotive.bautomotive.custom.MyTextView_Roboto_Regular-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginRight="5dp"-->
-        <!--android:text="Forgot password?"-->
-        <!--android:textColor="#ef5037"-->
-
-        <!--android:textSize="15sp" />-->
-        <!--</LinearLayout>-->
-
-        <!--<com.automotive.bautomotive.custom.MyTextView_Roboto_Regular-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@+id/ll_mobileNumber"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--android:layout_marginRight="5dp"-->
-        <!--android:text="Resend"-->
-        <!--android:textColor="#ef5037"-->
-        <!--android:textSize="15sp" />-->
-
-        <!--<com.automotive.bautomotive.custom.Button_sfuitext_regular-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@+id/ll_mobileNumber"-->
-        <!--android:layout_marginTop="30dp"-->
-        <!--android:layout_marginBottom="2dp"-->
-        <!--android:background="@drawable/rect_orange"-->
-        <!--android:gravity="center_horizontal"-->
-        <!--android:padding="15dp"-->
-        <!--android:text="LOGIN"-->
-        <!--android:textAllCaps="false"-->
-        <!--android:textColor="#ffffff"-->
-        <!--android:textSize="15sp" />-->
-
-    </RelativeLayout>
+    </LinearLayout>
 
     <com.automotive.bautomotive.custom.Button_sfuitext_regular
         android:id="@+id/btn_proceed"
